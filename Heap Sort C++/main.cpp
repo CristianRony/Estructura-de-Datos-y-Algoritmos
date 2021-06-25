@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
+unsigned t01, t1;
 
 void heapify(int arr[], int n, int i)
 {
@@ -84,4 +86,9 @@ int main()
 
     cout << "After sorting:  \n";
     displaydata(input, n);
+    t0=clock();
+    t1=clock();
+    double time = (double(t1-t0)/CLOCKS_PER_SEC);
+    cout<<"n\ Tiempo de Ejecución es:" <<time<<end;
+    return 0;
 }
