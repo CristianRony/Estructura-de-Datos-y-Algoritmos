@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <ctime>
+unsigned t0, t1;
 
 using namespace std;
 
@@ -28,6 +30,10 @@ int main() {
     sort(input, n);
     cout << "After sorting: " << endl;
     displaydata(input, n);
+    t0=clock();
+    t1=clock();
+    double time = (double(t1-t0)/CLOCKS_PER_SEC);
+    cout<<"n\ Tiempo de Ejecución es:" <<time<<end;
     return 0;
 }
 void sort(int *a, int n) {
