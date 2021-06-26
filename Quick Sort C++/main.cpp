@@ -25,15 +25,17 @@ int main() {
         cout << "Zero items!" << endl;
         exit(1);
     }
+    t0=clock();
     cout << "Before sorting: " << endl;
     displaydata(input, n);
     sort(input, n);
+    t1=clock();
     cout << "After sorting: " << endl;
     displaydata(input, n);
-    t0=clock();
-    t1=clock();
+
+
     double time = (double(t1-t0)/CLOCKS_PER_SEC);
-    cout<<"n\ Tiempo de Ejecución es:" <<time<<end;
+    cout << "Time: " <<time<< endl;
     return 0;
 }
 void sort(int *a, int n) {
