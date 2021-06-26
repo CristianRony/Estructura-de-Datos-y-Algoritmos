@@ -80,15 +80,16 @@ int main()
         cout << "Zero items!" << endl;
         exit(1);
     }
+    t0=clock();
     cout << "Before sorting: " << endl;
     displaydata(input, n);
     heapSort(input, n);
-
-    cout << "After sorting:  \n";
-    displaydata(input, n);
-    t0=clock();
     t1=clock();
+    cout << "After sorting: " << endl;
+    displaydata(input, n);
+
+
     double time = (double(t1-t0)/CLOCKS_PER_SEC);
-    cout<<"n\ Tiempo de Ejecución es:" <<time<<end;
-    return 0;
+    cout << "Time: " <<time<< endl;
+    return 0;   
 }
